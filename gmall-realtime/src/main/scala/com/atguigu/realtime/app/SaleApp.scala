@@ -46,6 +46,7 @@ object SaleApp extends BaseApp {
     lastResult.foreachRDD(rdd => rdd.foreach(println))
     saleInfoToEs(lastResult)
 
+
   }
   //缓存orderInfo到redis
   def cacheOrderInfo(client: Jedis,key : String,orderInfo: OrderInfo) ={
